@@ -23,3 +23,14 @@ The main objectives of this project are:
 - Display real-time and historical temperature and humidity data, along with system status.
 - Create a Client VI for read-only access to data and synchronized sample rate control.
 - Ensure smooth data processing using running averages and realistic signal simulations
+
+
+## How it works
+
+There are three parts to this LabVIEW System.
+- The Server Virtual Instrument:
+    - semester_1_project_server.vi
+- The Global Virtual Instrument:
+    - semester_1_project_global.vi
+- The Client Virtual Instrument:
+    - semester_1_project_client.vi
