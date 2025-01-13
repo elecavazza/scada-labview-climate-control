@@ -34,3 +34,33 @@ There are three parts to this LabVIEW System.
     - semester_1_project_global.vi
 - The Client Virtual Instrument:
     - semester_1_project_client.vi
+
+### The Server Virtual Instrument
+The Server Virtual Instrument handles the core operating logic of the system.  
+This includes the temperature and humidity simulation along with the heater and dehumidifier
+system.  
+All states are stored where possible in global variables located within the external Global Virtual
+Instrument including controls:  
+- Humidity
+- Temperature
+- Dehumidifier
+- Heater
+- Humidity setpoint high
+- Humidity setpoint low
+- Temperature setpoint high
+- Temperature setpoint low
+- Humidity setpoint high control
+- Humidity setpoint low control
+- Temperature setpoint high control
+- Temperature setpoint low control
+- Sample Rate
+- Sample Rate Control
+- Humidity Max
+- Temperature Max
+- Power
+- Power Control
+There is nothing contained within the Server Front Panel.  
+The Server initializes all state in the program where possible within a Flat Sequence Structure
+outside of the main loop of execution.  
+This allows for variables to be initially set with default values within the program before the run
+time loop.  
