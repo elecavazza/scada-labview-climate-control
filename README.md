@@ -122,11 +122,8 @@ signal is greater than it.
 ### Temperature and Humidity Running Average Logic
 
 Within the main loop we leverage shift registers to store the last 6 Signal Measurements.  
-
 We then feed all the values into a Compound Arithmetic operator to sum the values.  
-
 The Sum is then divided by the count which is 6 to derive the average value.  
-
 This is done for both Humidity and Temperature.  
 
 ### Temperature and Humidity Historical Values Logic
@@ -183,7 +180,8 @@ The limited indicators implemented are:
 The limited controls implemented are:  
 - Sample Rate
 
-This virtual instrument is quite simple. The values of Global variables are read from and written
+This virtual instrument is quite simple.  
+The values of Global variables are read from and written
 to local indicators.  
 
 The Sample Rate Control updates the Wait (ms) operator within the Client While Loop and also updates the Sample Rate Global Variable so that the local Wait (ms) operator is set within the Server VI.  
@@ -225,15 +223,17 @@ This can be seen in our:
 - Temperature and Humidity Simulation Logic
 - Max Temperature and Humidity Logic
 
-OPERATING PROCEDURES
-First a user must open all panels:
+## OPERATING PROCEDURES
+
+First a user must open all panels:  
 - Server Back Panel
 - Client Front Panel
 - Client Back Panel
 - Global Front Panel
-They must then start the Server by clicking the Run arrow in the upper left side of the window.
-They must then start the Client by clicking the Run arrow in the upper left side of the window.
-The initial state of the program will be:
+
+They must then start the Server by clicking the Run arrow in the upper left side of the window.  
+They must then start the Client by clicking the Run arrow in the upper left side of the window.  
+The initial state of the program will be:  
 - Both the Dehumidifier and Heater will be off
 - Humidity will be 40
 - Humidity low point will be 30
@@ -260,18 +260,18 @@ From the Client the user can increase or decrease the Sample rate this will slow
 
 ## RESULTS/CONCLUSIONS
 
-<u>Develop a Server VI to simulate temperature and humidity</u>  
+### Develop a Server VI to simulate temperature and humidity  
 
 A Server VI was successfully designed and implemented to simulate temperature and humidity conditions. The simulation incorporated Heater and Dehumidifier status to influence the simulated values. This provided realistic simulation behavior.  
 
-<u>Implement automatic heater and dehumidifier activation based on setpoint thresholds</u>  
+###Implement automatic heater and dehumidifier activation based on setpoint thresholds  
 Automatic activation of the heater and dehumidifier based on configurable setpoint thresholds was successfully implemented. Both the Heater and Dehumidifier turn On/Off when set points are reached by their respective signals.  
 
 
-<u>Display real-time indicators and controls</u>  
+###Display real-time indicators and controls  
 Real-time indicators and controls were developed to display control all the necessary system metrics listed in the brief. These indicators are user-friendly, real time, and provide a clear and interactive interface to monitor system behavior effectively.  
 
-<u>Create a Client VI for read-only access to data and synchronized sample rate control</u>
+###Create a Client VI for read-only access to data and synchronized sample rate control
 The Client VI was created to allow read-only access to data from the Server VI.
 The Client VI operated with synchronized sample rate control, ensuring consistent and accurate
 data visualization between it and the Server.
