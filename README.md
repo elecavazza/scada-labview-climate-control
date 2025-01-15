@@ -15,8 +15,10 @@ The implementation involves three Virtual Instruments (VIs):
 - Server VI which implements environment and machine logic
 - Global VI for storing, viewing and controlling variables
 - Client VI for more limited viewing and controlling
+
 By utilizing global variables and various LabVIEW structures, the system ensures efficient data
 sharing, synchronized operation.  
+
 The main objectives of this project are:  
 - Develop a Server VI to simulate and control temperature and humidity.
 - Implement automatic heater and dehumidifier activation based on setpoint thresholds.
@@ -59,19 +61,21 @@ Instrument including controls:
 - Temperature Max
 - Power
 - Power Control
+
 There is nothing contained within the Server Front Panel.  
-The Server initializes all state in the program where possible within a Flat Sequence Structure
-outside of the main loop of execution.  
-This allows for variables to be initially set with default values within the program before the run
-time loop.  
+The Server initializes all state in the program where possible within a Flat Sequence Structure outside of the main loop of execution.  
+This allows for variables to be initially set with default values within the program before the run time loop.  
 
 #### Server Virtual Instrument Block Diagram Screenshot Part 1
+
 ![](./pictures/server_block_diagram_part1.png)
 
 #### Server Virtual Instrument Block Diagram Screenshot Part 2
+
 ![](./pictures/server_block_diagram_part2.png)
 
 ### Heater and Dehumidifier On\Off Logic
+
 Within the main loop of execution (While Loop) we have the Heater and Dehumidifier logic.  
 This involves reading from the Measurement and setpoint variables.  
 The output is then fed into a comparison that outputs a true/false result into a Case Structure.  
@@ -95,6 +99,7 @@ the same
 
 
 ### Temperature and Humidity Simulation Logic
+
 To Simulate the Signals, we feed the System power status into a Case Structure within the main loop of execution (While Loop).  
 Based on whether the System is on or off 0.1 will be either added or removed from the signal.  
 For each use case:  
