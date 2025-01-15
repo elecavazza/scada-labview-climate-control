@@ -262,18 +262,23 @@ From the Client the user can increase or decrease the Sample rate this will slow
 
 ### Develop a Server VI to simulate temperature and humidity  
 
-A Server VI was successfully designed and implemented to simulate temperature and humidity conditions. The simulation incorporated Heater and Dehumidifier status to influence the simulated values. This provided realistic simulation behavior.  
+A Server VI was successfully designed and implemented to simulate temperature and humidity conditions.  
+The simulation incorporated Heater and Dehumidifier status to influence the simulated values.  
+This provided realistic simulation behavior.  
 
-###Implement automatic heater and dehumidifier activation based on setpoint thresholds  
-Automatic activation of the heater and dehumidifier based on configurable setpoint thresholds was successfully implemented. Both the Heater and Dehumidifier turn On/Off when set points are reached by their respective signals.  
+### Implement automatic heater and dehumidifier activation based on setpoint thresholds  
+
+Automatic activation of the heater and dehumidifier based on configurable setpoint thresholds was successfully implemented.  
+Both the Heater and Dehumidifier turn On/Off when set points are reached by their respective signals.  
 
 
-###Display real-time indicators and controls  
-Real-time indicators and controls were developed to display control all the necessary system metrics listed in the brief. These indicators are user-friendly, real time, and provide a clear and interactive interface to monitor system behavior effectively.  
+### Display real-time indicators and controls  
 
-###Create a Client VI for read-only access to data and synchronized sample rate control
-The Client VI was created to allow read-only access to data from the Server VI.
-The Client VI operated with synchronized sample rate control, ensuring consistent and accurate
-data visualization between it and the Server.
-This functionality enables remote monitoring and visualization of system metrics without
-interfering with the control processes managed by the Server VI.
+Real-time indicators and controls were developed to display control all the necessary system metrics listed in the brief.  
+These indicators are user-friendly, real time, and provide a clear and interactive interface to monitor system behavior effectively.  
+
+### Create a Client VI for read-only access to data and synchronized sample rate control
+
+The Client VI was created to allow read-only access to data from the Server VI.  
+The Client VI operated with synchronized sample rate control, ensuring consistent and accurate data visualization between it and the Server.  
+This functionality enables remote monitoring and visualization of system metrics withoutinterfering with the control processes managed by the Server VI.  
